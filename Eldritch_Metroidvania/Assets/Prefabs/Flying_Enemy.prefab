@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2722123333483423121}
   - component: {fileID: -3407675347535144008}
   - component: {fileID: -1699615668516238029}
-  - component: {fileID: 7034088171905024136}
+  - component: {fileID: 362793697368243899}
   m_Layer: 0
   m_Name: Flying_Enemy
   m_TagString: Enemy
@@ -181,38 +181,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   MAX_VELOCITY: 20
---- !u!58 &7034088171905024136
-CircleCollider2D:
+--- !u!114 &362793697368243899
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376419869921660419}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 750
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fe3a323129f284db87c3b94fde3e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: a7d0b71c8ebbc2a4faff5e0b4a0e7567, type: 2}
+  damage: 10
+  damageRate: 1

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 763895444511355805}
   - component: {fileID: 2722123333483423121}
   - component: {fileID: 1332597823838744800}
+  - component: {fileID: 8048694198122678996}
   m_Layer: 0
   m_Name: Round_Enemy
   m_TagString: Enemy
@@ -164,3 +165,18 @@ MonoBehaviour:
   moveDistance: 5000
   moveSpeed: 10
   waitTime: 1
+--- !u!114 &8048694198122678996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376419869921660419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96fe3a323129f284db87c3b94fde3e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: a7d0b71c8ebbc2a4faff5e0b4a0e7567, type: 2}
+  damage: 10
+  damageRate: 1
