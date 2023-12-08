@@ -1,16 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ContactDamage : MonoBehaviour
 {
     public FloatVariable playerHealth;
     public float damage;
-    public float damageRate = 10f;
+    public float damageRate = 1f;
+    
 
-
-    private float timeSinceLastDamage = 0;
-
+    private float timeSinceLastDamage = 100;
     
     
     // Start is called before the first frame update
@@ -36,7 +36,22 @@ public class ContactDamage : MonoBehaviour
                     playerHealth.value -= damage;
                     timeSinceLastDamage = 0;
                 }
-            }
+				if (collision.gameObject.CompareTag("Enemy"))
+				{
+                    float enemyHealth = (float)Variables.Object(collision.gameObject).Get("enemyHealth");
+                    enemyHealth -= damage;
+					Variables.Object(collision.gameObject).Set("enemyHealth", enemyHealth);
+
+                    if(enemyHealth <= 0) 
+                    {
+                        Destroy(collision.gameObject);
+					}
+
+
+					timeSinceLastDamage = 0;
+				}
+
+			}
         }
 	}
 }

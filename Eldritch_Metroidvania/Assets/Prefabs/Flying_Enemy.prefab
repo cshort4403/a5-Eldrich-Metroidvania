@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: -3407675347535144008}
   - component: {fileID: -1699615668516238029}
   - component: {fileID: 362793697368243899}
-  m_Layer: 0
+  - component: {fileID: -8188251707308619888}
+  m_Layer: 7
   m_Name: Flying_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -196,3 +197,19 @@ MonoBehaviour:
   playerHealth: {fileID: 11400000, guid: a7d0b71c8ebbc2a4faff5e0b4a0e7567, type: 2}
   damage: 10
   damageRate: 1
+--- !u!114 &-8188251707308619888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376419869921660419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"enemyHealth","value":{"$content":100.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []

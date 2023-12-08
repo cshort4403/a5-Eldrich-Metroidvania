@@ -558,7 +558,8 @@ GameObject:
   - component: {fileID: 629427285}
   - component: {fileID: 629427292}
   - component: {fileID: 629427290}
-  m_Layer: 0
+  - component: {fileID: 629427293}
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -714,6 +715,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 5.5, y: 12}
   m_Direction: 0
+--- !u!114 &629427293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629427284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f9adeda66e3bb4c888955cdaafa546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  coolDown: 1
+  attackDuration: 1
+  attackObject: {fileID: 2415705160294343711, guid: ce47aa969c8f1254b9daf564bf963920, type: 3}
+  shouldAttack: 0
 --- !u!1001 &638732932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -960,6 +978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Sprite (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 73.3409
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1025,6 +1047,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Sprite (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 127.64375
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 36.086174
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1089,6 +1119,14 @@ PrefabInstance:
     - target: {fileID: 5646725343214504593, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
       propertyPath: m_Name
       value: Wall_Sprite (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 81.94199
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 31.391039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1438,6 +1476,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Sprite (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 54.68312
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 38.158848
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1734,6 +1780,10 @@ PrefabInstance:
     - target: {fileID: 5646725343214504593, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
       propertyPath: m_Name
       value: Wall_Sprite (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141065830644908181, guid: 5f7582e7936830d439b4a2746d202121, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 11.631132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
