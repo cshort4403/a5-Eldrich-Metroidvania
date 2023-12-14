@@ -1,26 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthSliderHandler : MonoBehaviour
 {
-    public FloatVariable playerHealth;
-    public FloatVariable maxPlayerHealth;
+    public FloatVariable curHealth;
+    public FloatVariable maxHealth;
 
-    Slider healthSlider;
+    public Slider healthSlider;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthSlider = GetComponent<Slider>();
-        healthSlider.maxValue = maxPlayerHealth.value;
-        playerHealth.value = maxPlayerHealth.value;
+        //healthSlider = GetComponent<Slider>();
+        healthSlider.maxValue = maxHealth.value;
+        curHealth.value = maxHealth.value;
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthSlider.value = playerHealth.value;
-    }
+		if (gameObject.tag == "Enemy")
+		{
+			healthSlider.value = (float)Variables.Object(gameObject).Get("enemyHealth");
+		}
+        else
+        {
+			healthSlider.value = curHealth.value;
+		}
+	}
 }

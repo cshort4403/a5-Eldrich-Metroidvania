@@ -15,8 +15,6 @@ public class Attack : MonoBehaviour
 
     //Animation component
 
-
-    private float timeSinceLastAttack = 100;
     private float attackTime = 0;
 
 
@@ -31,46 +29,21 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(!shouldAttack && Input.GetMouseButtonDown(0))
+        if (attackTime >= attackDuration + coolDown)
         {
-            shouldAttack = true;
-        }
-
-        
-       
-        if(shouldAttack) 
-        {
-            
-            if(attackTime >= attackDuration)
+            if (Input.GetMouseButtonDown(0))
             {
-                OnAttack();
-		    }
-            else
-		    {
-			    attackTime += Time.deltaTime;
-		    }
+                CreateWeaponObject();
+                attackTime = 0;
+            }
+
         }
-
-       
-
-
-	}
-
-    void OnAttack()
-    {
-        if(timeSinceLastAttack >= coolDown)
-        {
-            CreateWeaponObject();
-            timeSinceLastAttack = 0;
-			shouldAttack = false;
-			attackTime = 0;
-		}
         else
         {
-            timeSinceLastAttack += Time.deltaTime;
+            attackTime += Time.deltaTime;
         }
-    }
+        
+	}
 
     void CreateWeaponObject()
     {

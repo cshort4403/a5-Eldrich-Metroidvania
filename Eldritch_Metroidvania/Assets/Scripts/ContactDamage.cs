@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ContactDamage : MonoBehaviour
 {
     public FloatVariable playerHealth;
+    public FloatVariable enemyHealth;
     public float damage;
     public float damageRate = 1f;
     
