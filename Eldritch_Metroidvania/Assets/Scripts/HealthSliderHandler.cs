@@ -18,8 +18,12 @@ public class HealthSliderHandler : MonoBehaviour
         healthSlider.maxValue = maxHealth.value;
         curHealth.value = maxHealth.value;
 
+		if (gameObject.tag == "Enemy")
+		{
+			healthSlider.value = (float)Variables.Object(gameObject).Get("enemyHealth");
+		}
 
-    }
+	}
 
     // Update is called once per frame
     void Update()
