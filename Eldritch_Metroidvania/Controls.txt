@@ -1,0 +1,4 @@
+A - Move Left
+D - Move Right
+SPACE - Jump
+LEFT_CLICK - Attack
